@@ -1,0 +1,98 @@
+.mentionWrapper {
+  position: relative;
+  width: min(720px, 100%);
+  margin: 16px auto 0;
+}
+
+.mentionTextarea {
+  width: 100%;
+  resize: vertical;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  font: inherit;
+  line-height: 1.5;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mentionTextarea:focus {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 2px rgba(100, 100, 255, 0.15);
+}
+
+.mentionTextarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.mentionDropdown {
+  position: absolute;
+  z-index: 50;
+  width: 320px;
+  max-width: calc(100vw - 24px);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: #111;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.mentionDropdownHeader {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.mentionDropdownList {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.mentionItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mentionItem:hover {
+  background: #f5f5f5;
+}
+
+.mentionItemActive {
+  background: #eaeaea;
+}
+
+.mentionItemTop {
+  font-family: monospace;
+  display: flex;
+  gap: 6px;
+}
+
+.mentionItemUsername {
+  font-weight: 600;
+}
+
+.mentionHighlight {
+  background: #dbeafe;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.mentionItemFio {
+  font-size: 12px;
+  color: #666;
+}
+
+.mentionEmpty {
+  padding: 12px;
+  text-align: center;
+  color: #888;
+}
